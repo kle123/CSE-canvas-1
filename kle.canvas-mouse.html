@@ -19,16 +19,19 @@
 			var canvas = document.getElementById('myCanvas');
 			var ctx = canvas.getContext('2d');
 			
-			var form = document.getElementById('canvasForm');
-			form.addEventListener('mousemove', function(event) 
-				event.preventDefault();
+		
+			
+			
+			
+			
+			
 			
 			function drawCircle(x, y, radius, color)
 			{
 				
 				// draw a circle and fill it in
 				ctx.beginPath();
-				ctx.arc(3, 3, radius, 3, Math.PI*2, true);
+				ctx.arc(x, y, radius, 0, Math.PI*2, true);
 				ctx.closePath();
 				
 				// set the fill color to red
@@ -39,6 +42,10 @@
 			
 			canvas.addEventListener('mousemove', function(event) {
 				console.log('mousemove at (%o, %o)', event.offsetX, event.offsetY);
+			
+			drawCircle(event.offsetX, event.offsetY, 10)
+			
+			
 			});
 			
 		</script>
