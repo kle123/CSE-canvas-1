@@ -10,7 +10,8 @@
 	</head>
 	<body>
 	
-		
+		<input type="click" click="ChangeBackground()"
+		value="Change background color" />
 		
 		<canvas width="500" height="500" id="myCanvas"></canvas>
 		
@@ -18,8 +19,8 @@
 		<script>
 			var canvas = document.getElementById('myCanvas');
 			var ctx = canvas.getContext('2d');
-			
-		
+			var color = "#00FF00"
+			var backgroundcolor = "#00FF00"
 			
 			
 			
@@ -42,11 +43,24 @@
 			
 			canvas.addEventListener('mousemove', function(event) {
 				console.log('mousemove at (%o, %o)', event.offsetX, event.offsetY);
+		
+			drawCircle(event.offsetX, event.offsetY, 10, color)
+
 			
-			drawCircle(event.offsetX, event.offsetY, 10)
 			
 			
 			});
+			function ChangeBackground()
+			{
+			
+				document.body.style.backgroundColor="lavender";
+			}
+			
+			canvas.addEventListener('click', function(event) {
+				console.log('click at (%o, %o)', event.offsetX, event.offsetY);
+			
+						
+							});
 			
 		</script>
 	</body>
