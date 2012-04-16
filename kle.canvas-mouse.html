@@ -6,12 +6,14 @@
 		#myCanvas {
 			border: 10px dotted red;
 		}
+		
+		
 		</style>
 	</head>
 	<body>
 	
-		<input type="click" click="ChangeBackground()"
-		value="Change background color" />
+	<input type="button" onclick="ChangeBackground()"
+	value="Change background color" />
 		
 		<canvas width="500" height="500" id="myCanvas"></canvas>
 		
@@ -51,14 +53,15 @@
 			
 			});
 			function ChangeBackground()
-			{
+{
+			document.body.style.backgroundColor="lavender";
+}			
 			
-				document.body.style.backgroundColor="lavender";
-			}
 			
 			canvas.addEventListener('click', function(event) {
 				console.log('click at (%o, %o)', event.offsetX, event.offsetY);
-			
+		
+		
 						
 							});
 			
