@@ -43,8 +43,8 @@
 			}
 			
 			
-			canvas.addEventListener('mousemove', function(event) {
-				console.log('mousemove at (%o, %o)', event.offsetX, event.offsetY);
+			canvas.addEventListener('click', function(event) {
+				console.log('click at (%o, %o)', event.offsetX, event.offsetY);
 		
 			drawCircle(event.offsetX, event.offsetY, 10, color)
 
